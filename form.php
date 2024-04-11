@@ -41,15 +41,18 @@
         display: block;
         margin: 10px 0 0 0;
     }
+    img {
+      width: 100%;
+    }
 </style>
 </head>
 <body>
 
 <div class="container">
     <h2>Регистрационная форма</h2>
-    <form action="form-handler.php" method="post">
+    <form action="index.php" method="post">
         <label for="full_name">ФИО:</label><br>
-        <input type="text" id="full_name" name="fio" required><br>
+        <input type="text" id="full_name" name="name" required><br>
 
         <label for="phone">Телефон:</label><br>
         <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"><br>
@@ -58,18 +61,18 @@
         <input type="email" id="email" name="email" required><br>
 
         <label for="dob">Дата рождения:</label><br>
-        <input type="date" id="dob" name="birth_date" required><br>
+        <input type="date" id="dob" name="date" required><br>
 
         <label>Пол:</label><br>
-        <input type="radio" id="male" name="gender" value="male" required>
+        <input type="radio" id="male" name="gender" value="m" required>
         <label for="male">Мужской</label>
-        <input type="radio" id="female" name="gender" value="female" required>
+        <input type="radio" id="female" name="gender" value="f" required>
         <label for="female">Женский</label><br>
 
         <label class="title" for="prog_lang">Любимый язык программирования:</label>
 
         <!-- <select id="prog_lang" name="prog_lang[]" multiple required> -->
-        <select id="prog_lang" name="favorite_languages[]" multiple="multiple">
+        <select id="prog_lang" name="Languages[]" multiple="multiple">
             <option value="Pascal">Pascal</option>
             <option value="C">C</option>
             <option value="C++">C++</option>
@@ -86,11 +89,27 @@
         <label class="title" for="biography">Биография:</label>
         <textarea id="biography" name="biography" rows="4" required></textarea><br>
 
-        <input type="checkbox" id="contract" name="contract_accepted" required>
+        <input type="checkbox" id="contract" name="agree" required>
         <label for="contract">С контрактом ознакомлен(а)</label><br>
 
         <input class="btn" type="submit" value="Сохранить">
     </form>
+
+
+    <p>1) Подключение к серверу СУБД</p>
+  <img src="img/img_1.png" alt="screenshot-1">
+  <br>
+  <br>
+  <p>2) Создание таблицы</p>
+  <img src="img/img_2.png" alt="screenshot-2">
+  <br>
+  <br>
+  <p>3) Заполнение таблицы</p>
+  <img src="img/img_3.png" alt="screenshot-3">
+  <br>
+  <br>
+  <p>4) Просмотр содеражания таблиц</p>
+  <img src="img/img_4.png" alt="screenshot-4">
 </div>
 
 </body>
